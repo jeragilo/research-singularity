@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,16 +18,8 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Showcasing my projects in AI, Cloud, DevOps, and SQL.
+        Showcasing my AI, Cloud, and DevOps work.
       </motion.p>
-      <Link href="/projects">
-        <motion.button
-          className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition"
-          whileHover={{ scale: 1.05 }}
-        >
-          View Projects
-        </motion.button>
-      </Link>
     </main>
   );
 }
