@@ -1,3 +1,4 @@
+
 "use client";
 import Link from "next/link";
 
@@ -18,6 +19,9 @@ export default function Navbar() {
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white">
               About
+            </Link>
+            <Link href="/skills" className="text-gray-300 hover:text-white">
+              Skills & Resume
             </Link>
           </div>
         </div>
