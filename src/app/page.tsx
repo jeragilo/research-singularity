@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -30,15 +29,17 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <Link href="/projects">
-          <a className="bg-blue-600 px-6 py-3 rounded-lg text-white font-bold hover:bg-blue-700 transition">
-            View My Projects
-          </a>
+        <Link
+          href="/projects"
+          className="bg-blue-600 px-6 py-3 rounded-lg text-white font-bold hover:bg-blue-700 transition"
+        >
+          View My Projects
         </Link>
-        <Link href="/about">
-          <a className="bg-gray-800 px-6 py-3 rounded-lg text-white font-bold hover:bg-gray-700 transition">
-            About Me
-          </a>
+        <Link
+          href="/about"
+          className="bg-gray-800 px-6 py-3 rounded-lg text-white font-bold hover:bg-gray-700 transition"
+        >
+          About Me
         </Link>
       </motion.div>
     </main>

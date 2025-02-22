@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const projects = [
@@ -33,6 +34,20 @@ export default function ProjectsPage() {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        className="mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <Link
+          href="/"
+          className="bg-gray-800 px-6 py-3 rounded-lg text-white font-bold hover:bg-gray-700 transition"
+        >
+          Back to Home
+        </Link>
+      </motion.div>
     </main>
   );
 }
