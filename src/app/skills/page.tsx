@@ -22,6 +22,17 @@ export default function SkillsPage() {
         My Skills & Resume
       </motion.h1>
 
+      <motion.a
+        href="/resume.pdf" // 🔥 Replace with the actual resume PDF file
+        download="Jesus_Gil_Resume.pdf"
+        className="mt-4 px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700 transition"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        📄 Download Resume
+      </motion.a>
+
       <div className="mt-6 space-y-6">
         {skills.map((skill, index) => (
           <motion.div
