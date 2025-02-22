@@ -2,6 +2,12 @@
 import { motion } from "framer-motion";
 
 export default function ProjectsPage() {
+  const projects = [
+    { title: "Stock Predictor AI", description: "Machine Learning model for financial forecasting." },
+    { title: "Blockchain Identity Verification", description: "Secure identity verification using blockchain and AI." },
+    { title: "Azure Cloud Deployment", description: "End-to-end DevOps project with CI/CD pipelines." },
+  ];
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen text-center px-6">
       <motion.h1
@@ -12,14 +18,21 @@ export default function ProjectsPage() {
       >
         My Projects
       </motion.h1>
-      <motion.p
-        className="text-lg text-gray-300 mt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        A collection of my AI, Cloud, and DevOps work.
-      </motion.p>
+
+      <div className="mt-6 space-y-6">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.3 }}
+          >
+            <h2 className="text-2xl font-bold text-blue-400">{project.title}</h2>
+            <p className="text-gray-300 mt-2">{project.description}</p>
+          </motion.div>
+        ))}
+      </div>
     </main>
   );
 }

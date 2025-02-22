@@ -1,5 +1,7 @@
+
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +14,7 @@ export default function Home() {
       >
         Welcome to My Portfolio
       </motion.h1>
+
       <motion.p
         className="text-lg text-gray-300 mt-4"
         initial={{ opacity: 0 }}
@@ -20,6 +23,24 @@ export default function Home() {
       >
         Showcasing my AI, Cloud, and DevOps work.
       </motion.p>
+
+      <motion.div
+        className="mt-6 flex gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <Link href="/projects">
+          <a className="bg-blue-600 px-6 py-3 rounded-lg text-white font-bold hover:bg-blue-700 transition">
+            View My Projects
+          </a>
+        </Link>
+        <Link href="/about">
+          <a className="bg-gray-800 px-6 py-3 rounded-lg text-white font-bold hover:bg-gray-700 transition">
+            About Me
+          </a>
+        </Link>
+      </motion.div>
     </main>
   );
 }
